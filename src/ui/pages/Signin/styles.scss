@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}signin';
+
+#{$block} {
+    margin: 20px auto;
+    width: 400px;
+
+    &__input {
+        margin-top: 10px;
+    }
+
+    &__button {
+        margin-top: 10px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 5px;
+        margin-top: 20px;
+    }
+}

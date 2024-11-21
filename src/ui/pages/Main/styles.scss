@@ -1,0 +1,11 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}main';
+
+#{$block} {
+    &__session {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--g-color-line-generic);
+    }
+}

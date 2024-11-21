@@ -1,0 +1,5 @@
+{
+  "extends": "@gravity-ui/tsconfig/tsconfig",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

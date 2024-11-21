@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}reload';
+
+#{$block} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &__card {
+        padding: 20px;
+    }
+}

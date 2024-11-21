@@ -1,0 +1,22 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "outDir": "../../dist/public/build",
+        "resolveJsonModule": true,
+        "jsx": "react",
+        "module": "ESNext",
+        "baseUrl": ".",
+        "useUnknownInCatchVariables": false,
+        "paths": {
+            "ui": ["./"],
+            "ui/*": ["./*"],
+            "shared": ["../shared"],
+            "shared/*": ["../shared/*"]
+        }
+    },
+    "include": [
+      "**/*",
+      "../shared/**/*"
+    ]
+}
+  

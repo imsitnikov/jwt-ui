@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+    "outDir": "../../dist",
+    "resolveJsonModule": true,
+        "paths": {
+            "shared": ["../shared"],
+            "shared/*": ["../shared/*"]
+        }
+    },
+    "include": ["**/*", "../shared/**/*"]
+}

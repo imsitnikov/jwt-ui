@@ -1,0 +1,26 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}refresh-tokens';
+
+#{$block} {
+    display: flex;
+    flex-direction: column;
+
+    &__loader {
+        margin: 0 auto;
+    }
+
+    &__table {
+        width: 100%;
+
+        table {
+            width: 100%;
+        }
+    }
+
+    &__row {
+        &_active {
+            background-color: #d5ffd4;
+        }
+    }
+}

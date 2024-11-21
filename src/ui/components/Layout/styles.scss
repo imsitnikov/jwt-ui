@@ -1,0 +1,31 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}layout';
+
+#{$block} {
+    margin: 10px 20px;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title-menu {
+        display: flex;
+        gap: 5px;
+        margin-left: 20px
+    }
+
+    &__menu {
+        display: flex;
+        gap: 5px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    &__content {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}

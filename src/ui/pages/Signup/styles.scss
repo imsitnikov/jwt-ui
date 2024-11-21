@@ -1,0 +1,16 @@
+@use '../../styles/variables.scss';
+
+$block: '.#{variables.$ns}signup';
+
+#{$block} {
+    margin: 20px auto;
+    width: 400px;
+
+    &__input {
+        margin-top: 10px;
+    }
+
+    &__button {
+        margin-top: 10px;
+    }
+}
