@@ -9,7 +9,8 @@ import {
 } from '@gravity-ui/icons';
 import {Button, Card, Icon} from '@gravity-ui/uikit';
 import React from 'react';
-import {Link, Outlet} from 'react-router-dom';
+import {Link, Outlet, useSearchParams} from 'react-router-dom';
+import {RELOADED_QUERY_PARAM} from 'shared/constants';
 
 import {block} from '../../utils';
 
@@ -22,6 +23,15 @@ type Props = {
 };
 
 export const Layout: React.FC<Props> = ({isAuthenticated}) => {
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    React.useEffect(() => {
+        if (searchParams.has(RELOADED_QUERY_PARAM)) {
+            searchParams.delete(RELOADED_QUERY_PARAM);
+            setSearchParams(searchParams);
+        }
+    }, [searchParams]);
+
     return (
         <div className={b()}>
             <div className={b('title')}>

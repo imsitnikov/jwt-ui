@@ -6,4 +6,6 @@ export const X_FORWARDED_FOR_HEADER = 'x-forwarded-for';
 export const AUTH_COOKIE_NAME = 'auth';
 export const AUTH_EXP_COOKIE_NAME = 'auth_exp';
 
+export const RELOADED_QUERY_PARAM = 'reloaded';
+
 export const ACCESS_TOKEN_TIME_RESERVE = 5;

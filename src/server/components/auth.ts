@@ -7,6 +7,7 @@ import {
     ACCESS_TOKEN_TIME_RESERVE,
     AUTH_COOKIE_NAME,
     AUTH_EXP_COOKIE_NAME,
+    RELOADED_QUERY_PARAM,
     SET_COOKIE_HEADER,
     X_FORWARDED_FOR_HEADER,
 } from 'shared/constants';
@@ -82,7 +83,8 @@ export const uiAuth = async (req: Request, res: Response, next: NextFunction) =>
         } catch (err) {
             req.ctx.logError('REFRESH_TOKEN_ERROR', err);
 
-            if (req.query.reloaded) {
+            if (req.query[RELOADED_QUERY_PARAM]) {
+                // TODO: Use /logout from auth
                 res.clearCookie(AUTH_COOKIE_NAME).clearCookie(AUTH_EXP_COOKIE_NAME);
                 next();
                 return;

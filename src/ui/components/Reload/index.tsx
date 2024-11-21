@@ -1,5 +1,6 @@
-import {Card, ThemeProvider} from '@gravity-ui/uikit';
+import {Loader, ThemeProvider} from '@gravity-ui/uikit';
 import React from 'react';
+import {RELOADED_QUERY_PARAM} from 'shared/constants';
 
 import '../../styles/global.scss';
 import {block} from '../../utils';
@@ -11,23 +12,18 @@ const b = block('reload');
 export const Reload = () => {
     React.useEffect(() => {
         setTimeout(() => {
-            let search = window.location.search + (window.location.search ? '&' : '?');
-            search += 'reloaded=true';
-            window.location.href =
-                window.location.protocol +
-                '//' +
-                window.location.host +
-                window.location.pathname +
-                search;
+            const searchParams = new URLSearchParams(window.location.search);
+            searchParams.set(RELOADED_QUERY_PARAM, 'true');
+            window.location.href = `${window.location.protocol}//${window.location.host}${
+                window.location.pathname
+            }?${searchParams.toString()}`;
         }, 1000);
     }, []);
 
     return (
         <ThemeProvider theme="system">
             <div className={b()}>
-                <Card className={b('card')} theme="warning">
-                    Page is reloading...
-                </Card>
+                <Loader size="l" />
             </div>
         </ThemeProvider>
     );
