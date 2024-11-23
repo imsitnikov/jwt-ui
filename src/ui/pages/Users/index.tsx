@@ -41,10 +41,6 @@ const columns: TableColumnConfig<DataItem>[] = [
         id: 'password',
         name: 'Hashed password',
     },
-    {
-        id: 'passwordSalt',
-        name: 'Password salt',
-    },
 ];
 
 type Props = {

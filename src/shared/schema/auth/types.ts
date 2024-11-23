@@ -5,7 +5,6 @@ export type User = {
     updatedAt: string;
     login: string | null;
     password: string | null;
-    passwordSalt: string | null;
 };
 
 export type UsersResponse = User[];
