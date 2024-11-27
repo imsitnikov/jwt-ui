@@ -117,7 +117,7 @@ export const uiAuth = async (req: Request, res: Response, next: NextFunction) =>
         const {accessToken} = JSON.parse(authCookie);
         const {userId, sessionId} = jwt.verify(
             accessToken,
-            req.ctx.config.accessTokenPublicKey,
+            req.ctx.config.tokenPublicKey,
         ) as AccessTokenPayload;
 
         req.originalContext.set('user', {
@@ -145,7 +145,7 @@ export const apiAuth = async (req: Request, res: Response, next: NextFunction) =
         const {accessToken} = JSON.parse(authCookie);
         const {userId, sessionId} = jwt.verify(
             accessToken,
-            req.ctx.config.accessTokenPublicKey,
+            req.ctx.config.tokenPublicKey,
         ) as AccessTokenPayload;
 
         req.originalContext.set('user', {

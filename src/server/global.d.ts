@@ -6,7 +6,7 @@ declare module '@gravity-ui/nodekit' {
     }
 
     interface AppConfig {
-        accessTokenPublicKey: string;
+        tokenPublicKey: string;
     }
 }
 

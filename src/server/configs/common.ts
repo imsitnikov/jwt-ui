@@ -8,7 +8,7 @@ const config: Partial<AppConfig> = {
     appSocket: 'dist/run/server.sock',
     appAuthPolicy: AuthPolicy.required,
 
-    accessTokenPublicKey: getEnvCert(process.env.ACCESS_TOKEN_PUBLIC_KEY as string),
+    tokenPublicKey: getEnvCert(process.env.TOKEN_PUBLIC_KEY as string),
 };
 
 export default config;

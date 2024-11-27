@@ -56,6 +56,6 @@ export const actions = {
 
     deleteRefreshToken: createAction<undefined, DeleteRefreshTokenParams>({
         method: 'DELETE',
-        path: ({refreshToken}) => `/refresh-tokens/${refreshToken}`,
+        path: ({refreshTokenId}) => `/refresh-tokens/${refreshTokenId}`,
     }),
 };

@@ -7,7 +7,7 @@ const getRefreshPromise = () =>
         .then((res) => {
             if (res.status === 401) {
                 alert('Your session has expired!');
-                window.location.reload();
+                window.location.href = '/';
             }
             return res;
         })

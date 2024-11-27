@@ -17,7 +17,7 @@ APP_DEV_MODE=true
 
 AUTH_ENDPOINT=http://localhost:3001
 
-ACCESS_TOKEN_PUBLIC_KEY=<ACCESS_TOKEN_PUBLIC_KEY из auth сервиса>
+TOKEN_PUBLIC_KEY=<TOKEN_PUBLIC_KEY из auth сервиса>
 ```
 
 4) `npm run dev`

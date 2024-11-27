@@ -18,8 +18,8 @@ const columns: TableColumnConfig<DataItem>[] = [
         name: '',
     },
     {
-        id: 'refreshToken',
-        name: 'Refresh token',
+        id: 'refreshTokenId',
+        name: 'Refresh token ID',
     },
     {
         id: 'sessionId',
@@ -64,7 +64,7 @@ export const RefreshTokens: React.FC<Props> = ({user}) => {
                                 callWithRefresh(() =>
                                     sdk.root.auth
                                         .deleteRefreshToken({
-                                            refreshToken: refreshToken.refreshToken,
+                                            refreshTokenId: refreshToken.refreshTokenId,
                                         })
                                         .then(() => {
                                             setIsLoading(true);

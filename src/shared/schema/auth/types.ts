@@ -30,7 +30,7 @@ export type DeleteSessionParams = {
 };
 
 export type RefreshToken = {
-    refreshToken: string;
+    refreshTokenId: string;
     sessionId: string;
     createdAt: string;
     expiredAt: string;
@@ -39,5 +39,5 @@ export type RefreshToken = {
 export type RefreshTokenResponse = RefreshToken[];
 
 export type DeleteRefreshTokenParams = {
-    refreshToken: string;
+    refreshTokenId: string;
 };
